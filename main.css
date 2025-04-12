@@ -651,33 +651,6 @@ cursor: pointer;
     background-color: #0069d9;
 }
 
-.cart-items {
-    padding: 20px;
-    max-height: 60vh;
-    overflow-y: auto;
-    /* أنماط شريط التمرير */
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
-}
-
-/* أنماط شريط التمرير لمتصفحات WebKit */
-.cart-items::-webkit-scrollbar {
-    width: 8px;
-}
-
-.cart-items::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.cart-items::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-.cart-items::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 
 .fa-bars{
     color: #fff;
@@ -692,6 +665,21 @@ cursor: pointer;
 .main-head .remove-item{
     display: none;
 }
+
+
+
+
+.container-cart {
+    max-height: 60vh; /* يمكنك تعديل هذه القيمة حسب الحاجة */
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
 
 @media (max-width: 1024px) {
     header{
@@ -790,13 +778,9 @@ cursor: pointer;
     .img-home{
         padding: 10px;
     }
-    .img-home img{
-        width: 100%;
-        height: 50%;
-    }
     .img-home img {
         width: 100%;
-        height:80%;
+        height:70%;
         border-radius: 10px;
         transition: transform 0.5s ease;
       }
@@ -827,7 +811,7 @@ cursor: pointer;
     }
     .img-about{
         width: 70%;
-        height: 40%;
+        height: 30%;
     }
     .describtion{
         flex-direction: column;
@@ -900,7 +884,10 @@ cursor: pointer;
         height: 100%;
         display: flex;
     }
-  
+    .Main a{
+        width: 100%;
+        height: 200px;
+    }
     .Main{
         width: 250px;
         height: 150px;
@@ -953,7 +940,7 @@ cursor: pointer;
     }
     .img-contact{
         width: 70%;
-        height: 40%;
+        height: 30%;
     }
     .container-cart {
         position: fixed;
@@ -968,6 +955,20 @@ cursor: pointer;
         z-index: 1000;
         display: none;
         flex-direction: column;
-      }
+      }   
+      .searsh-form{
+        position: absolute;
+        top: 105%; left: 30%;
+        background: rgb(255, 255, 255);
+        color: #000000;
+        display: flex;
+        width: 250px;
+        display: none;
+        height: 40px;
+        border: #000000 1px solid;
+        justify-content: center;
+        align-items: center;
+        padding:0 10px ;
+    }
 }
 

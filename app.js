@@ -287,3 +287,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the application
     init();
 });
+
+// Add scroll to the cart container when items are more than a certain number
+function updateCartUI() {
+    const containerCart = document.querySelector('.container-cart');
+    
+    // Check if the number of items in the cart exceeds 3
+    if (cartItems.length > 3) {
+        containerCart.style.maxHeight = '60vh'; // Adjust the height as needed
+        containerCart.style.overflowY = 'auto';
+    } else {
+        containerCart.style.maxHeight = 'none';
+        containerCart.style.overflowY = 'visible';
+    }
+    
+    // Continue with your cart update logic...
+}
+
