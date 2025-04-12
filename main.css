@@ -955,5 +955,19 @@ cursor: pointer;
         width: 70%;
         height: 40%;
     }
+    .container-cart {
+        position: fixed;
+        top: 10%;
+        right: 50px;
+        background: #fff;
+        width: 400px;
+        max-height: 90vh;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 1000;
+        display: none;
+        flex-direction: column;
+      }
 }
 
