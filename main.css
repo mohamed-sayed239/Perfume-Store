@@ -958,9 +958,9 @@ cursor: pointer;
     .container-cart {
         position: fixed;
         top: 10%;
-        right: 50px;
+        right: 10px;
         background: #fff;
-        width: 400px;
+        width: 350px;
         max-height: 90vh;
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
         border-radius: 10px;
