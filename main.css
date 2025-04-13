@@ -68,7 +68,6 @@ header a:hover::after{
 .home,.about{
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-around;
     width: 100%;
     height: 100vh;
@@ -286,10 +285,11 @@ header a:hover::after{
     cursor: pointer;
 }
 .img-des h2{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: #ffffff;
     padding: 10px 0;
+    letter-spacing: 3px;
 }
 .img-des img:hover{
     transform: scale(1.1);
@@ -300,7 +300,7 @@ header a:hover::after{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 100px;padding: 50px 100px;
+    padding: 50px 100px;
     background: #1A2238;
     color: #fff;
     width: 100%;
@@ -376,7 +376,7 @@ header a:hover::after{
     }
 .img-man,.img-women{
     flex: 0 0 auto; 
-    background: #17194450;
+    background: #181a586e;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
@@ -486,7 +486,7 @@ cursor: pointer;
     justify-content: flex-start;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .social a{
     width: 70px;
@@ -575,17 +575,14 @@ cursor: pointer;
     border-radius: 8px;
     margin-right: 15px;
 }
-
 .item-details h3 {
     margin: 0;
     font-size: 18px;
 }
-
 .item-details p {
     margin: 5px 0;
     font-size: 14px;
 }
-
 .remove-item {
     background: red;
     color: white;
@@ -597,7 +594,6 @@ cursor: pointer;
     cursor: pointer;
     margin-left: auto;
 }
-
 /* Cart totals */
 .cart-total {
     padding: 20px;
@@ -606,11 +602,9 @@ cursor: pointer;
     margin: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-
 .shipping-selection {
     margin-bottom: 15px;
 }
-
 .shipping-selection select {
     padding: 8px 12px;
     font-size: 16px;
@@ -619,23 +613,19 @@ cursor: pointer;
     width: 100%;
     margin-top: 5px;
 }
-
 .total-price p {
     font-size: 16px;
     margin: 8px 0;
 }
-
 .grand-total span {
     font-weight: bold;
     font-size: 18px;
 }
-
 /* Confirm button */
 .btn-cart {
     text-align: center;
     margin: 20px;
 }
-
 .confirm-order {
     background-color: #007bff;
     color: white;
@@ -646,12 +636,9 @@ cursor: pointer;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .confirm-order:hover {
     background-color: #0069d9;
 }
-
-
 .fa-bars{
     color: #fff;
     font-size: 30px;
@@ -665,26 +652,66 @@ cursor: pointer;
 .main-head .remove-item{
     display: none;
 }
-
-
-
-
 .container-cart {
     max-height: 60vh; /* يمكنك تعديل هذه القيمة حسب الحاجة */
     overflow-y: auto;
 }
 
+.cart-link {
+    position: relative;
+    display: inline-block;
+}
 
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
 
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
 
+.box-option {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
 
+.box-option button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-
+.box-option button.active {
+    background: #333;
+    color: white;
+}
 
 @media (max-width: 1024px) {
     header{
         height: 40px;
-        padding:10px ;
+        padding:30px 10px;
     }
     .icon-head{
         align-items: center;
@@ -692,21 +719,21 @@ cursor: pointer;
         display: flex;
     }
     .icon-head a i{
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 700;
     }
     .main-head a{
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 700;
         color:#ffffff;
     }
     .logo a img{
-        width: 70px;
-        height:30px;
+        width: 100px;
+        height:40px;
       }
     .icon-head{
-        gap: 10px;
-        font-size: 10px;
+        gap: 15px;
+        font-size: 12px;
     }
     .fa-bars{
         display: flex;
@@ -743,8 +770,10 @@ cursor: pointer;
     .home,.about,.contact-section{
         padding: 50px 20px; 
         flex-direction: column;
-        justify-content: none;
+        justify-content: center;
         width: 100%;
+        display: flex;
+        gap: 10px;
     }
     .main-home,.main-contact{
         gap:15px;
@@ -773,7 +802,7 @@ cursor: pointer;
     }
     .hover-card {
         width: 80%;
-        height:50% ;
+        height:40% ;
     }
     .img-home{
         padding: 10px;
@@ -797,20 +826,20 @@ cursor: pointer;
         font-weight: 700;
       }
     .main-about{
-        width: 70%;
+        width: 80%;
         height: 50%;
     }
     .main-about h2{
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 500;
         padding: 10px 0;
     }
     .main-about p{
-        font-size: 12px;
-        padding: 20px 0;
+        font-size: 15px;
+        padding: 10px 0;
     }
     .img-about{
-        width: 70%;
+        width: 80%;
         height: 30%;
     }
     .describtion{
@@ -820,16 +849,15 @@ cursor: pointer;
         padding:100px 20px;;
     }
     .main-des{
-        width: 70%;
+        width: 90%;
         gap: 20px ;
     }
     .main-des h2{
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 700;
-        letter-spacing: 1;
     }
     .main-des h3{
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 700;
     }
     .btn-des{
@@ -839,7 +867,7 @@ cursor: pointer;
         background: linear-gradient(45deg, #A4720E, #E8C27A);
         color: #ffffff;
         border: none;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: 700;
         padding:5px 15px;
         border-radius: 10px;
@@ -849,35 +877,40 @@ cursor: pointer;
         background:#ffffff;
         color: #dfbc22;
         border:1px solid #dfbc22;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: 700;
         padding:5px 15px;
         border-radius: 10px;
         cursor: pointer;
     }
     .product-des{
-        width: 100%; 
+        width: 90%; 
         direction: ltr; 
-        padding: 10px;
+        padding:5px 0;
         gap: 20px;
     }
     .img-des{
         margin-right: 10px;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 170px;
     }
     .img-des h2{
-        font-size: 7px;
+        font-size: 8px;
         font-weight: 700;
         padding: 5px 0;
+        letter-spacing: 2px;
     }
     .Categories{
         padding: 50px;
         width: 100%;
-        height: 1300px;
+        height: 1200px;
+    }
+    .head-Categories{
+        width: 100%;
+        text-align:center;
     }
     .head-Categories h2,.head-man h2{
-        font-size: 20px;
+        font-size: 25px;
     }
     .Main-Categories{
         flex-direction: column;
@@ -912,20 +945,15 @@ cursor: pointer;
         display: flex;
     }
     .img-man h2, .img-women h2{
-            font-size: 15px;
-            font-weight: 700;
+        font-size: 17px;
+        font-weight: 700;
      }
     .img-man p,.img-women p{
-            font-size: 10px;
-            font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 2;
+        font-weight: 500;
     }
-    .img-man h3 span,.img-women h3 span{ 
-            font-size: 10px;
-            font-weight: 500;
-            gap: 30px;
-            text-decoration: line-through;
-            color: gray;  
-     }
      .img-man h3 ,.img-women h3{
         font-size: 12px;
         font-weight: 700;
@@ -934,10 +962,32 @@ cursor: pointer;
         padding: 2px 6px;
         font-size: 10px;
     }
+    .main-contact{
+        width: 70%;
+        gap: 20px;
+    }
+    .main-contact h2{
+        font-size: 30px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .main-contact p{
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffffce;
+        padding-top: 5px;
+    }
+    .social{
+        margin-top: 30px;
+    }
+
     .social a{
         width: 50px;
         height: 50px;
     }
+
+
+
     .img-contact{
         width: 70%;
         height: 30%;
