@@ -5,9 +5,13 @@ let cart = document.querySelector('.container-cart');
 let searsh = document.querySelector('.searsh-form');
 let mainhead = document.querySelector('.main-head');
 let  remove= document.querySelector(".main-head .remove-container");
+let  removecart= document.querySelector(".remove-container-cart");
 
 remove.onclick = ()=>{
     mainhead.classList.remove('open')
+}
+removecart.onclick = ()=>{
+    cart.classList.remove('open')
 }
 bar.onclick = ()=>{
     mainhead.classList.toggle('open')
