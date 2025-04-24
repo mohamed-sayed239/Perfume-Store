@@ -549,8 +549,8 @@ cursor: pointer;
 .container-cart {
     position: fixed;
     top: 10%;
-    right: 10px;
-    left:60px;
+    right: 0;
+    left:10px;
     background: #fff;
     width: 700px;
     height: 100%;
